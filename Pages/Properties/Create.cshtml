@@ -1,0 +1,103 @@
+﻿@page
+@model SimpleList1.Pages.Properties.CreateModel
+@{
+}
+
+<br />
+<h2>Add a Property</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">House Address</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="HouseAddress" value="@Model.propertyList.HouseAddress" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Street</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="Street" value="@Model.propertyList.Street" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">City</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="City" value="@Model.propertyList.City" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Zipcode</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="Zipcodes" value="@Model.propertyList.Zipcodes" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Block</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="Block" value="@Model.propertyList.Block" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Lot</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="Lot" value="@Model.propertyList.Lots" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Owner</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="Owner" value="@Model.propertyList.Owner" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Age</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="Age" value="@Model.propertyList.Age" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Phone Number</label>
+        <div class=" col-sm-6">
+            <input type="text" class="form-control" name="PhoneNumber" value="@Model.propertyList.PhoneNumber" />
+        </div>
+    </div>
+
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="col-sm-9">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>@Model.successMessage</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+
+
+</form>

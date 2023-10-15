@@ -1,0 +1,45 @@
+﻿@page
+@model SimpleList1.Pages.Properties.IndexModel
+@{
+}
+
+<br />
+<h2>list of Clients</h2>
+<a class="btn btn-primary btn-sm" href="/Properties/Create">New Property</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>House Number</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Zipcode</th>
+            <th>Block</th>
+            <th>Lot</th>
+            <th>Owner</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+         </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListProperty)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.HouseAddress</td>
+                <td>@item.Street</td>
+                <td>@item.City</td>
+                <td>@item.Zipcodes</td>
+                <td>@item.Block</td>
+                <td>@item.Lots</td>
+                <td>@item.Owner</td>
+                <td>@item.Age</td>
+                <td>@item.PhoneNumber</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Properties/Edit?id=">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Properties/Delete?id=">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
